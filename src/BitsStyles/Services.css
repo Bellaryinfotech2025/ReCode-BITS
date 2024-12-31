@@ -1,0 +1,136 @@
+ /*services*/
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Service cards styling */
+.service-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100px); /* Start from right (or left) */
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+}
+
+/* Service card background colors */
+.web-app {
+    background: linear-gradient(180deg, #E0F7FF 0%, #B2FFD6 100%);
+}
+
+.mobile-app {
+    background: linear-gradient(180deg, #FFE9A0 0%, #FFD24C 100%);
+}
+
+.staff {
+    background: linear-gradient(180deg, #B5E8FF 0%, #E6FFE6 100%);
+}
+
+.emerging {
+    background: linear-gradient(180deg, #B2FFD6 0%, #7FFFD4 100%);
+}
+
+/* Heading style for the services section */
+.services-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.service-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+/* Service list styling */
+.service-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+/* Service images */
+.service-image {
+    margin-top: auto;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 8px;
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+
+/* Button to book a meeting */
+.book-meeting {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(90deg, #FF6B6B 0%, #FF8E53 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1200px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.75rem;
+    }
+}

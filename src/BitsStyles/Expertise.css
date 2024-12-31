@@ -1,0 +1,118 @@
+/* Container for the services */
+.services-container-bits {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+  /* Individual Service Box Styling */
+  .service-box-bits {
+    width: 25%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  .service-box-bits .service-image-bits {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .service-box-bits img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-box-bits .service-text-bits {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .service-box-bits:hover .service-text-bits {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .service-box-bits:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .services-container-bits {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-box-bits {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Scroll Animation */
+  @keyframes slideIn-bits {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .services-container-bits .service-box-bits:nth-child(1) {
+    animation: slideIn-bits 1s ease-out 0.2s forwards;
+  }
+  
+  .services-container-bits .service-box-bits:nth-child(2) {
+    animation: slideIn-bits 1s ease-out 0.4s forwards;
+  }
+  
+  .services-container-bits .service-box-bits:nth-child(3) {
+    animation: slideIn-bits 1s ease-out 0.6s forwards;
+  }
+  
+  /* Style for Service Titles */
+  .service-text-bits h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for Service Descriptions */
+  .service-text-bits p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .servicesthreeboxes{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+   
+  

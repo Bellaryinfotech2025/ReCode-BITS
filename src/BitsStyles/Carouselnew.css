@@ -1,0 +1,127 @@
+/* General container for carousel */
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #0a152f 40%, transparent);
+  overflow-x: hidden;  /* Prevent horizontal scroll */
+  width: 100vw;  /* Ensure full width of viewport */
+  margin: 0;  /* Remove any default margins */
+}
+
+/* Styling for individual slides */
+.carousel-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+  padding: 0 20px;
+  opacity: 0.9;
+}
+
+.carousel-slide .slide-text {
+  width: 45%;
+  padding-right: 30px;
+  color: #fff;
+  text-align: left;
+  font-size: 2rem;  /* Increased font size */
+}
+
+.carousel-slide h1 {
+  font-size: 3rem;  /* Increased heading size */
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.carousel-slide p {
+  font-size: 1.4rem;  /* Increased paragraph size */
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Styling for the image side of the slide */
+.carousel-slide .slide-image {
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 1s ease;
+}
+
+/* Radio controls (small circles below the image) */
+.radio-controls {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.radio-btn {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.radio-btn.active {
+  background-color: #B4004E;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 0 10px;  /* Reduce padding to avoid overflow */
+  }
+
+  .carousel-slide {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  /* Center text on mobile */
+    width: 100vw;  /* Ensure the slide takes up full width */
+    padding: 0;  /* Remove extra padding */
+  }
+
+  .carousel-slide .slide-text {
+    width: 100%;
+    font-size: 1.4rem;  /* Adjust font size for mobile */
+  }
+
+  .carousel-slide h1 {
+    font-size: 2.2rem;  /* Adjust heading size for mobile */
+  }
+
+  .carousel-slide p {
+    font-size: 1.2rem;  /* Adjust paragraph size for mobile */
+  }
+
+  .carousel-slide .slide-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .carousel-slide img {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .radio-btn {
+    width: 10px;  /* Adjust radio button size on mobile */
+    height: 10px;
+  }
+}

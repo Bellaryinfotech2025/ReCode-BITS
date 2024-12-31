@@ -1,0 +1,87 @@
+.bodyofcareers {
+    font-family: -apple-system, system-ui, sans-serif;
+    line-height: 1.6;
+    color: #4a4a4a;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-left h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.about-left p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.features {
+    display: grid;
+    gap: 2rem;
+}
+
+.feature {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon.red { color: #ff4444; }
+.feature-icon.orange { color: #ff8c00; }
+.feature-icon.green { color: #4CAF50; }
+.feature-icon.blue { color: #2196F3; }
+
+.feature-content h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.feature-content p {
+    color: #666;
+}
+
+.blog-link {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.blog-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-left h1 {
+        font-size: 2rem;
+    }
+
+    .bodyofcareers {
+        padding: 1rem;
+    }
+}
